@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects · Jess Rees</title>
+<meta name="description" content="Research projects by Jess Rees: truth inference over ICD-11 diagnoses, antimicrobial resistance, sequential clinical decision support.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="site-name" href="index.html">Jess Rees</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="index.html">About</a>
+      <a href="projects.html" aria-current="page">Projects</a>
+      <a href="cv/Jess-Rees-CV.pdf">CV (PDF)</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <h1>Projects</h1>
+  <p class="subtitle">Current research projects, all part of my PhD at the University of the Witwatersrand.</p>
+
+  <section class="project" id="truth-inference">
+    <h2>Truth inference over ICD-11 diagnoses</h2>
+    <ul class="tags"><li>Bayesian hierarchical models</li><li>PyMC</li><li>ICD-11</li><li>Simulation</li></ul>
+    <p>When several doctors and AI systems diagnose the same patient, they often disagree, and there is usually no verified diagnosis to check them against. This project infers the most likely true diagnosis and the reliability of each diagnoser at the same time, using a Bayesian hierarchical model.</p>
+    <p>The model uses the structure of the ICD-11 classification of diseases. A diagnosis that is close to the true diagnosis in the ICD-11 hierarchy is treated as a smaller error than one in an unrelated part of the hierarchy. The result is a posterior probability distribution over diagnoses, which shows how uncertain the inferred diagnosis is, together with an estimate of each diagnoser's reliability.</p>
+    <p class="status">Status: method developed and evaluated on simulated data. Presented at the Wits Science Faculty research showcase, where it was awarded second place for Best Research Presentation.</p>
+
+    <figure class="demo" id="ti-demo" aria-label="Illustrative example of truth inference">
+      <div class="demo-head">ILLUSTRATIVE EXAMPLE</div>
+      <div class="demo-title">Eight diagnoses of one patient</div>
+      <p class="note" style="margin-top:-6px">Step through the example to see how the inferred diagnosis and each diagnoser's reliability change as diagnoses are added. The diagram is a simplified disease hierarchy and the numbers are illustrative, not model output.</p>
+      <div class="demo-body">
+        <div class="demo-graph" id="ti-graph"></div>
+        <div class="demo-side">
+          <div>
+            <div class="best">
+              <div class="label"><span>INFERRED DIAGNOSIS</span><span id="ti-step">Ready</span></div>
+              <div class="value" id="ti-best">Some disease</div>
+            </div>
+            <p class="caption" id="ti-caption" aria-live="polite"></p>
+          </div>
+          <div>
+            <div class="rel-head"><strong>Reliability scores</strong><span>everyone starts at 50</span></div>
+            <div id="ti-rows"></div>
+          </div>
+        </div>
+      </div>
+      <div class="legend">
+        <span><i class="sw-ring"></i>Inferred diagnosis</span>
+        <span><i class="sw-t2"></i><i class="sw-t1"></i>Where the true diagnosis could also be</span>
+        <span><i class="sw-thr"></i>Reliability threshold: below it, a diagnoser's opinion counts for less</span>
+      </div>
+      <div class="controls">
+        <button type="button" id="ti-restart">Restart</button>
+        <button type="button" id="ti-back">Back</button>
+        <button type="button" id="ti-next" class="primary">Next diagnosis</button>
+        <button type="button" id="ti-play">Play</button>
+      </div>
+    </figure>
+  </section>
+
+  <section class="project" id="amr">
+    <h2>Antimicrobial resistance surveillance and modelling</h2>
+    <ul class="tags"><li>Antimicrobial resistance</li><li>Sepsis</li><li>Probabilistic modelling</li></ul>
+    <p>Doctors treating sepsis usually have to choose antibiotics days before laboratory results show which organism is present and which antibiotics it is resistant to. This project analyses clinical data from more than 1,000 sepsis patients to describe organism prevalence and antimicrobial susceptibility patterns. The next phase uses probabilistic models of longitudinal data to predict mortality and resistance.</p>
+  </section>
+
+  <section class="project" id="decision-support">
+    <h2>Sequential decision support in internal medicine and paediatrics</h2>
+    <ul class="tags"><li>Bayesian decision theory</li><li>Value of information</li><li>Causal graphs</li><li>Longitudinal data</li></ul>
+    <p>This project uses longitudinal, multimodal patient data from South African hospitals to build decision-support tools that report their uncertainty. Observations in these settings are sparse and irregular, and an overconfident prediction can lead to serious harm, so the models are designed to give calibrated estimates.</p>
+    <p>Current work includes causal graphs of the clinical workflow with and without AI assistance, and methods for choosing the next investigation by its expected value of information, where the cost of a test can include its availability, waiting time and cost to the patient.</p>
+  </section>
+
+  <section class="project" id="plan-evaluation">
+    <h2>Evaluating diagnosis and management plans</h2>
+    <ul class="tags"><li>Clinical evaluation</li><li>Scoring rubrics</li></ul>
+    <p>To evaluate AI systems in clinical settings, their diagnosis and management plans need to be compared with plans written by doctors. With the doctors in our team, I am developing a scoring rubric that compares a candidate plan with a reference plan across diagnoses, investigations, medications and non-pharmacological management. Doctors mark items that are missing from the candidate plan and items that were added to it in error, and score each one.</p>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">Jess Rees · Johannesburg, South Africa · Last updated November 2026</div>
+</footer>
+
+<script src="js/truth-inference-example.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jess Rees</title>
+<meta name="description" content="Jess Rees, Computer Science PhD candidate at the University of the Witwatersrand. Probabilistic inference and AI for clinical decision-making.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="site-name" href="index.html">Jess Rees</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="index.html" aria-current="page">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="cv/Jess-Rees-CV.pdf">CV (PDF)</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="intro" aria-label="Introduction">
+    <div class="photo">
+      <img src="images/photo.jpg" alt="Photo of Jess Rees" width="168" height="168"
+           onerror="this.remove(); document.getElementById('initials').hidden = false;">
+      <span class="initials" id="initials" hidden>JR</span>
+    </div>
+    <div class="intro-text">
+      <h1>Jess Rees</h1>
+      <p class="subtitle">PhD candidate in Computer Science, University of the Witwatersrand<br>Google PhD Fellow in Health Research</p>
+      <ul class="links">
+        <li><a href="mailto:jess.sian.rees@gmail.com">Email</a></li>
+        <li><a href="cv/Jess-Rees-CV.pdf">CV (PDF)</a></li>
+        <li><a href="https://www.raillab.org/author/jess-rees/">RAIL Lab</a></li>
+        <li><a href="https://github.com/JessSian">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/jessicarees">LinkedIn</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <p>I am a Computer Science PhD candidate at the University of the Witwatersrand (Wits), Johannesburg, and a Google PhD Fellow in Health Research. I am supervised by Professor Bruce Bassett and am a member of the Robotics, Autonomous Intelligence, and Learning (RAIL) Lab. I work in an interdisciplinary team of computer scientists and medical doctors.</p>
+  <p>My research is on probabilistic inference and AI systems for clinical decision-making, specifically sequential diagnosis and patient management in the South African public healthcare system.</p>
+  <p>Before starting my PhD in January 2026, I spent nine years at Discovery Health, most recently as Principal Data Scientist. I led a team of data scientists and AI engineers that prototyped and deployed AI and machine learning systems, including natural language processing and large language model applications for healthcare and operations.</p>
+
+  <h2 id="research">Research</h2>
+  <p>Doctors in South African public hospitals often make diagnostic and treatment decisions under time pressure, with incomplete information and few specialists available. Frontier AI models now perform well at diagnosis in many settings, but there is little evidence on how effective and safe they are in low- and middle-income countries.</p>
+  <p>My PhD develops Bayesian methods for using AI models in clinical decisions, so that the quantities a decision depends on are explicit and can be inspected by clinicians. It is driven by wanting to address three questions in sequential decision-making:</p>
+  <ol>
+    <li><strong>What is the diagnosis?</strong> Estimating the diagnosis, often when doctors and AI systems disagree and no verified diagnosis is available.</li>
+    <li><strong>What test should we do next?</strong> Ranking possible investigations by their expected value of information and immediate and downstream benefit to the patient, taking into account the cost and availability of tests.</li>
+    <li><strong>What patient management step should be taken?</strong> Recommending management steps using multi-objective optimisation and decision theory, with offline reinforcement learning as an exploratory extension.</li>
+  </ol>
+  <p>The applications are general diagnosis in internal medicine and paediatrics, and antimicrobial resistance. See <a href="projects.html">Projects</a> for current work.</p>
+
+  <h2 id="awards">Awards</h2>
+  <ul class="entries">
+    <li><span class="when">2026–2028</span><span class="what"><strong>Google PhD Fellowship in Health Research</strong></span></li>
+    <li><span class="when">2026</span><span class="what"><strong>Second place, Best Research Presentation</strong><span>Wits Science Faculty research showcase</span></span></li>
+    <li><span class="when">2024</span><span class="what"><strong>Mail &amp; Guardian 200 Young South Africans</strong></span></li>
+    <li><span class="when">2023</span><span class="what"><strong>Winner, Discovery Actuarial Conference</strong><span>International competition of 800 actuaries and data scientists, for the company's first training and application of large language models</span></span></li>
+    <li><span class="when">2023</span><span class="what"><strong>Award for excellence in operations research practice</strong><span>Operations Research Society of South Africa</span></span></li>
+  </ul>
+
+  <h2 id="talks">Invited talks</h2>
+  <ul class="entries">
+    <li><span class="when">2026</span><span class="what"><strong>Asking the right questions: AI in science and healthcare</strong><span>Wits Science Faculty Top Achievers Day</span></span></li>
+    <li><span class="when">2026</span><span class="what"><strong>AI in healthcare</strong><span>Wits Physicians' Update</span></span></li>
+    <li><span class="when">2024</span><span class="what"><strong>RAG: learnings from industry</strong><span>Deep Learning IndabaX South Africa</span></span></li>
+    <li><span class="when">2024</span><span class="what"><strong>Panellist: Ethics, law and governance with automated decision-making systems</strong><span>Norton Rose and ORSSA</span></span></li>
+  </ul>
+
+  <h2 id="experience">Experience</h2>
+  <ul class="entries">
+    <li><span class="when">2024–2025</span><span class="what"><strong>Principal Data Scientist, Deputy General Manager</strong><span>Discovery Health. Led the design and evaluation of LLM-based systems and a team of 17 across data science, engineering and development.</span></span></li>
+    <li><span class="when">2021–2023</span><span class="what"><strong>Senior Data Scientist and Divisional Manager</strong><span>Discovery Health. Established and led the NLP Centre of Excellence for the Discovery Group.</span></span></li>
+    <li><span class="when">2017–2021</span><span class="what"><strong>Data Scientist and Manager</strong><span>Discovery Health. Predictive modelling, network analysis and unsupervised learning.</span></span></li>
+  </ul>
+
+  <h2 id="service">Service</h2>
+  <ul class="entries">
+    <li><span class="when">2025</span><span class="what"><strong>Industry adviser</strong><span>Advisory Council on AI in Healthcare</span></span></li>
+    <li><span class="when">2022–2024</span><span class="what"><strong>Executive committee member</strong><span>Operations Research Society of South Africa</span></span></li>
+  </ul>
+
+  <h2 id="education">Education</h2>
+  <ul class="entries">
+    <li><span class="when">2026–</span><span class="what"><strong>PhD in Computer Science</strong><span>University of the Witwatersrand. Thesis: Towards Robust Bayesian Sequential Diagnosis and Patient Management.</span></span></li>
+    <li><span class="when">2018</span><span class="what"><strong>Master of Information Technology</strong><span>University of Pretoria. Dissertation: Using Complex Network Theory to Analyse Workflow Processes.</span></span></li>
+    <li><span class="when">2016</span><span class="what"><strong>BBusSci in Analytics, with distinction</strong><span>University of Cape Town</span></span></li>
+  </ul>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">Jess Rees · Johannesburg, South Africa · Last updated November 2026</div>
+</footer>
+
+</body>
+</html>
