@@ -9,12 +9,11 @@ Static HTML and CSS site for GitHub Pages. No build step.
 - `css/style.css`: styles for both pages
 - `js/truth-inference-example.js`: the step-through example on the projects page
 - `cv/Jess-Rees-CV.pdf`: the CV linked from both pages
-- `images/photo.jpg`: your photo (add this; until then the page shows "JR")
+- `images/photo.jpg`: your photo (if it is missing, the page shows "JR" instead)
 
-## Adding the photo
+## Changing the photo
 
-1. Crop the photo to a square, about 600 x 600 pixels, and save it as a JPEG named `photo.jpg` (lowercase).
-2. Put `photo.jpg` in the `images` folder before you upload the site. GitHub does not keep empty folders, so if you upload the site first, add the photo later by opening the repository, selecting Add file, then Upload files, and dragging in the whole `images` folder containing `photo.jpg`. Select Commit changes.
+Crop the new photo to a square, about 600 x 600 pixels, and save it as a JPEG named `photo.jpg` (lowercase). In the repository, open the `images` folder, select Add file, then Upload files, and drag in `photo.jpg`. Select Commit changes. GitHub replaces the old file.
 
 ## Updating the CV
 
