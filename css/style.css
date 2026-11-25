@@ -62,6 +62,9 @@ p { margin: 0 0 14px; }
 .intro-text { min-width: 0; }
 
 .links { display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 4px 0 18px; padding: 0; list-style: none; font-size: 16px; }
+.section-nav { margin-top: 20px; padding: 10px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.section-nav .links { margin: 0; }
+.section-nav li { margin: 0; }
 
 @media (max-width: 600px) {
   .intro { flex-direction: column; gap: 16px; }

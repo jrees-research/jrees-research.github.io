@@ -33,7 +33,7 @@
     </div>
     <div class="intro-text">
       <h1>Jess Rees</h1>
-      <p class="subtitle">PhD candidate in Computer Science, University of the Witwatersrand<br>Google PhD Fellow in Health Research</p>
+      <p class="subtitle">PhD candidate in Computer Science<br>University of the Witwatersrand<br>Google PhD Fellow in Health Research</p>
       <ul class="links">
         <li><a href="https://www.raillab.org/author/jess-rees/">RAIL Lab</a></li>
         <li><a href="https://github.com/JessSian">GitHub</a></li>
@@ -46,23 +46,36 @@
   <p>My research is on probabilistic inference and AI systems for clinical decision-making, specifically sequential diagnosis and patient management in the South African public healthcare system.</p>
   <p>Before starting my PhD in January 2026, I spent nine years at Discovery Health, most recently as Principal Data Scientist. I led a team of data scientists and AI engineers that prototyped and deployed AI and machine learning systems, including natural language processing and large language model applications for healthcare and operations.</p>
 
+  <nav class="section-nav" aria-label="On this page">
+    <ul class="links">
+      <li><a href="#research">Research</a></li>
+      <li><a href="#awards">Awards</a></li>
+      <li><a href="#talks">Talks</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#service">Service</a></li>
+      <li><a href="#education">Education</a></li>
+    </ul>
+  </nav>
+
   <h2 id="research">Research</h2>
-  <p>Doctors in South African public hospitals often make diagnostic and treatment decisions under time pressure, with incomplete information and few specialists available. Frontier AI models now perform well at diagnosis in many settings, but there is little evidence on how effective and safe they are in low- and middle-income countries.</p>
-  <p>My PhD develops Bayesian methods for using AI models in clinical decisions, so that the quantities a decision depends on are explicit and can be inspected by clinicians. It is driven by wanting to address three questions in sequential decision-making:</p>
+  <p>Clinicians in South African public hospitals often make diagnostic and treatment decisions under significant time pressure and uncertainty. Frontier AI models (LLMs) now perform well at diagnosis in many settings, but there is little evidence on how effective and safe they are in low- and middle-income countries.</p>
+  <p>My PhD focusses on developing Bayesian methods for using AI models in clinical decisions, so that the quantities a decision depends on are explicit and can be inspected by clinicians. It is driven by wanting to address three questions in sequential clinical decision-making:</p>
   <ol>
-    <li><strong>What is the diagnosis?</strong> Estimating the diagnosis, often when doctors and AI systems disagree and no verified diagnosis is available.</li>
-    <li><strong>What test should we do next?</strong> Ranking possible investigations by their expected value of information and immediate and downstream benefit to the patient, taking into account the cost and availability of tests.</li>
-    <li><strong>What patient management step should be taken?</strong> Recommending management steps using multi-objective optimisation and decision theory, with offline reinforcement learning as an exploratory extension.</li>
+    <li><strong>What is the diagnosis?</strong> Estimating the diagnosis, often when clinicians and AI systems disagree and no verified diagnosis is available. Often there are multiple simultaneous diagnoses (multimorbidity).</li>
+    <li><strong>What test should we do next?</strong> Ranking possible investigations by their expected value of information and immediate and long-term benefit to the patient, taking into account the risk to the patient as well as the cost and availability of tests.</li>
+    <li><strong>What patient management step should be taken?</strong> Recommending management steps (medications, therapies, procedures, monitoring, escalations) by treating this decision as a multi-objective optimisation problem under uncertainty. .</li>
   </ol>
-  <p>The applications are general diagnosis in internal medicine and paediatrics, and antimicrobial resistance. See <a href="projects.html">Projects</a> for current work.</p>
+  <p>The primary applications of this research are to are general diagnosis and patient managerment in internal medicine and paediatrics, and to antimicrobial resistance (AMR), where we are interested in predicting resistance and recommending appropriate empiric therapy. See <a href="projects.html">Projects</a> for more detail.</p>
 
   <h2 id="awards">Awards</h2>
   <ul class="entries">
-    <li><span class="when">2026–2028</span><span class="what"><strong>Google PhD Fellowship in Health Research</strong></span></li>
+    <li><span class="when">2026–2028</span><span class="what"><strong><a href="https://research.google/programs-and-events/phd-fellowship/recipients/?filtertab=2025">Google PhD Fellowship in Health Research</a></strong></span></li>
     <li><span class="when">2026</span><span class="what"><strong>Second place, Best Research Presentation</strong><span>Wits Science Faculty research showcase</span></span></li>
-    <li><span class="when">2024</span><span class="what"><strong>Mail &amp; Guardian 200 Young South Africans</strong></span></li>
+    <li><span class="when">2026</span><span class="what"><strong>First place, Best Research Project</strong><span>AI, Uncertainty & Simulation Workshop, for project on AMR simulation and analysis (team project).</span></span></li>
+    <li><span class="when">2024</span><span class="what"><strong>Mail &amp; Guardian 200 Young South Africans</strong><span>Coverage: <a href="https://www.up.ac.za/alumni/news/sa-data-science-and-artificial-intelligence-are-internationally-competitive-alumna-and-mg-list">University of Pretoria</a>, <a href="https://commerce.uct.ac.za/articles/2024-07-04-200-young-south-africans-list-uct-connection">University of Cape Town</a></span></span></li>
     <li><span class="when">2023</span><span class="what"><strong>Winner, Discovery Actuarial Conference</strong><span>International competition of 800 actuaries and data scientists, for the company's first training and application of large language models</span></span></li>
-    <li><span class="when">2023</span><span class="what"><strong>Award for excellence in operations research practice</strong><span>Operations Research Society of South Africa</span></span></li>
+    <li><span class="when">2023</span><span class="what"><strong><a href="https://c9a757c0-2348-4644-a8a8-09677d5da5bc.filesusr.com/ugd/568002_448f8d4020ab46eca19e3c63a7d8d022.pdf">Award for excellence in operations research practice</a></strong><span>Operations Research Society of South Africa</span></span></li>
+    <li><span class="when">2022</span><span class="what"><strong>Second place, Discovery Actuarial Conference</strong><span>For innovations in company-wide data engineering practice.</span></span></li>
   </ul>
 
   <h2 id="talks">Invited talks</h2>
@@ -75,7 +88,7 @@
 
   <h2 id="experience">Experience</h2>
   <ul class="entries">
-    <li><span class="when">2024–2025</span><span class="what"><strong>Principal Data Scientist, Deputy General Manager</strong><span>Discovery Health. Led the design and evaluation of LLM-based systems and a team of 17 across data science, engineering and development.</span></span></li>
+    <li><span class="when">2024–2025</span><span class="what"><strong>Principal Data Scientist, Deputy General Manager</strong><span>Discovery Health. Led the design and evaluation of LLM-based systems and a team of 17 across data science, AI engineering, and development.</span></span></li>
     <li><span class="when">2021–2023</span><span class="what"><strong>Senior Data Scientist and Divisional Manager</strong><span>Discovery Health. Established and led the NLP Centre of Excellence for the Discovery Group.</span></span></li>
     <li><span class="when">2017–2021</span><span class="what"><strong>Data Scientist and Manager</strong><span>Discovery Health. Predictive modelling, network analysis and unsupervised learning.</span></span></li>
   </ul>
@@ -88,9 +101,9 @@
 
   <h2 id="education">Education</h2>
   <ul class="entries">
-    <li><span class="when">2026–</span><span class="what"><strong>PhD in Computer Science</strong><span>University of the Witwatersrand. Thesis: Towards Robust Bayesian Sequential Diagnosis and Patient Management.</span></span></li>
-    <li><span class="when">2018</span><span class="what"><strong>Master of Information Technology</strong><span>University of Pretoria. Dissertation: Using Complex Network Theory to Analyse Workflow Processes.</span></span></li>
-    <li><span class="when">2016</span><span class="what"><strong>BBusSci in Analytics, with distinction</strong><span>University of Cape Town</span></span></li>
+    <li><span class="when">2026–</span><span class="what"><strong>PhD in Computer Science</strong><span>University of the Witwatersrand<br>Thesis: <em>Towards Robust Bayesian Sequential Diagnosis and Patient Management</em></span></span></li>
+    <li><span class="when">2018</span><span class="what"><strong>Master of Information Technology</strong><span>University of Pretoria<br>Dissertation: <em>Using Complex Network Theory to Analyse Workflow Processes</em></span></span></li>
+    <li><span class="when">2016</span><span class="what"><strong>BBusSci in Analytics, with distinction</strong><span>University of Cape Town<br>Honours research: <em>Assessing the Impact of Cognitive Biases on Interactive Multi-objective Optimisation using Simulation</em></span></span></li>
   </ul>
 
 </main>
