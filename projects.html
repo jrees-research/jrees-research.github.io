@@ -31,9 +31,22 @@
   <section class="project" id="truth-inference">
     <h2>Truth inference over ICD-11 diagnoses</h2>
     <ul class="tags"><li>Bayesian hierarchical models</li><li>PyMC</li><li>ICD-11</li><li>Simulation</li></ul>
-    <p>When several doctors and AI systems diagnose the same patient, they often disagree, and there is usually no verified diagnosis to check them against. This project infers the most likely true diagnosis and the reliability of each diagnoser at the same time, using a Bayesian hierarchical model.</p>
-    <p>The model uses the structure of the ICD-11 classification of diseases. A diagnosis that is close to the true diagnosis in the ICD-11 hierarchy is treated as a smaller error than one in an unrelated part of the hierarchy. The result is a posterior probability distribution over diagnoses, which shows how uncertain the inferred diagnosis is, together with an estimate of each diagnoser's reliability.</p>
-    <p class="status">Status: method developed and evaluated on simulated data. Presented at the Wits Science Faculty research showcase, where it was awarded second place for Best Research Presentation.</p>
+    <p>When clinicians and AI systems diagnose the same patient, they often disagree, and there is usually no verified diagnosis to use as a ground truth. In this project, we aim to simutaneously infer the most likely true diagnosis and the reliability of each diagnoser in the absence of ground truth labels, using a hierarchical Bayesian model.</p>
+    <p>The model leverages the structure of the ICD-11 classification of diseases, in which diseases are structured hierarchically in a Directed Acyclic Graph (DAG). A diagnosis that is close to the true diagnosis in the ICD-11 DAG is treated as a less severe error than one in an far away part of the DAG. The output is a posterior probability distribution over diagnoses, which shows how uncertain the inferred diagnosis is, together with an estimate of each diagnoser's reliability.</p>
+    <div class="status">
+      <p class="status-head">Status</p>
+      <ul>
+        <li>Method developed and evaluated on simulated data</li>
+        <li>Paper under review</li>
+        <li>Short talk presented at the Wits Science Faculty research showcase, where it was awarded second place for Best Research Presentation</li>
+        <li>Oral presented at the SASA 2026 conference</li>
+      </ul>
+      <p class="status-head">Next steps</p>
+      <ul>
+        <li>Application to real data from studies based in Johannesburg public hospitals</li>
+        <li>Investigation of non-taxonomic distance measures, especially those representing symptom presentation similarity and/or diagnostic confusability</li>
+      </ul>
+    </div>
 
     <figure class="demo" id="ti-demo" aria-label="Illustrative example of truth inference">
       <div class="demo-head">ILLUSTRATIVE EXAMPLE</div>
@@ -70,16 +83,29 @@
   </section>
 
   <section class="project" id="amr">
-    <h2>Antimicrobial resistance surveillance and modelling</h2>
+    <h2>Antimicrobial resistance (AMR) surveillance and modelling</h2>
     <ul class="tags"><li>Antimicrobial resistance</li><li>Sepsis</li><li>Probabilistic modelling</li></ul>
-    <p>Doctors treating sepsis usually have to choose antibiotics days before laboratory results show which organism is present and which antibiotics it is resistant to. This project analyses clinical data from more than 1,000 sepsis patients to describe organism prevalence and antimicrobial susceptibility patterns. The next phase uses probabilistic models of longitudinal data to predict mortality and resistance.</p>
+    <p>Clinicians treating sepsis usually have to choose antibiotics days before laboratory results confirm which organism is present and which antibiotics it is resistant to. In this project, we aim to use clinical data from sepsis patients in Johannesburg public hospitals to (1) describe organism prevalence and antimicrobial susceptibility patterns, (2) develop predictive models for identifying antimicrobial resistance and predicting mortality based on patient and hospital features, and (3) work towards optmising empiric antimicrobial therapy based on these predictions.</p>
+    <div class="status">
+      <p class="status-head">Status</p>
+      <ul>
+        <li>Data is being analysed in collaboration with clinicians.</li>
+      </ul>
+      <p class="status-head">Next steps</p>
+      <ul>
+        <li>Consider probabilistic models using longitudinal data to predict mortality and resistance.</li>
+        <li>Consider the analysis and modelling of high-frequency data from wearable devices.</li>
+      </ul>
+    </div>
+
+
   </section>
 
   <section class="project" id="decision-support">
     <h2>Sequential decision support in internal medicine and paediatrics</h2>
     <ul class="tags"><li>Bayesian decision theory</li><li>Value of information</li><li>Causal graphs</li><li>Longitudinal data</li></ul>
-    <p>This project uses longitudinal, multimodal patient data from South African hospitals to build decision-support tools that report their uncertainty. Observations in these settings are sparse and irregular, and an overconfident prediction can lead to serious harm, so the models are designed to give calibrated estimates.</p>
-    <p>Current work includes causal graphs of the clinical workflow with and without AI assistance, and methods for choosing the next investigation by its expected value of information, where the cost of a test can include its availability, waiting time and cost to the patient.</p>
+    <p>This project is related to the VALID studies (first paper from colleagues <a href="https://arxiv.org/pdf/2604.16980">here</a>). We intend to use longitudinal, multimodal patient data from South African hospitals to build statistically transparent and calibrated clinical decision-support tools for clinical diagnosis and patient management. </p>
+    <p>Current directions of inquiry include causal graphs of the clinical workflow with and without AI assistance, and methods for choosing the next investigation by its expected value of information.</p>
   </section>
 
   <!--
